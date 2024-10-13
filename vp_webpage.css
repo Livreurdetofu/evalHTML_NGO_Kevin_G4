@@ -1,0 +1,181 @@
+/* Core functions */
+.d-flex{
+    display: flex;
+}
+nav ul li {             /* Espacer les onglets */
+    margin-left: 10px;
+    margin-right: 30px;
+}
+ul {                    /* Retirer points noirs des listes ul */
+    list-style: none;
+}
+body {                  /* Supprime les marges */
+    margin: 0; 
+}
+.flex-column{
+    flex-direction:column;
+    }
+
+/* Center Align functions */
+.align-items-center {
+    align-items: center; 
+}
+.justify-content-center {
+    justify-content: center;
+}
+.text-align-center {
+    text-align: center;
+}
+
+/* Background Design */
+.header-bg{
+    background-color:yellow;
+    margin: 0;
+    height: 100px;    
+}
+.main-bg{
+    background-color:black;
+    margin: 0;
+    height: 100vh;    
+}
+.footer-bg{
+    background-color:yellow;
+    margin: 0;
+    height: 100px;    
+}
+
+
+/* Button Design */
+.button {
+    border: 2px solid;
+    background-color: rgb(255, 255, 0);
+    padding: 10px 40px;
+    position: relative;
+}
+.button::before {       /* bordure gauche découpée avec un carré jaune */
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: -14px;
+    left: -13px;
+    background-color: rgb(255, 255, 0);
+    border-top: 2px solid;
+    transform: rotate(45deg);
+}
+.button::after {        /* bordure droite découpée avec un carré jaune */
+    content: "";
+    width: 23px;        /* dimension carré */
+    height: 23px;
+    position: absolute;
+    top: -13px;         /* position carré */
+    right: -13px;
+    background-color: rgb(255, 255, 0);
+    border-bottom: 2px solid;   /* bordure noire pour découpage */
+    transform: rotate(45deg);   /* pour tourner de 45 degre */
+}
+
+.button2 {
+    border: 2px solid;
+    border-color: yellow;
+    background-color: rgb(0, 0, 0);
+    padding: 10px 50px;
+    position: relative;
+}
+.button2::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    bottom: -14px;
+    left: -13px;
+    background-color: rgb(0, 0, 0);
+    border-top: 2px solid;
+    border-color: yellow;
+    transform: rotate(45deg);
+}
+.button2::after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -14px;
+    right: -13px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 2px solid;
+    border-color: yellow;
+    transform: rotate(45deg);
+}
+
+/* Button Animation */
+.button:hover {
+    background-color: black;    /* change la couleur de fond au survol */
+    color:yellow;               /* change la couleur des lettres au survol */
+}
+.button2:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/* Police */
+.font-family-numerical{
+    font-family: 'OCR A Std', monospace;
+}
+
+/* Colors */
+.black-ink{
+    color: black;
+}
+.yellow-ink{
+    color: yellow;
+}
+.white-ink{
+    color: white;
+}
+
+/* Photo Positioning */
+.photography-spacing{
+    justify-content: space-between;
+    padding: 60px;
+}
+.image-container {
+    max-width: 100%;    /* limite la largeur du conteneur à 100% de l'écran */
+    overflow: hidden;   /* cache le débordement */
+    padding: 10px;      /* distance entre photos */
+    object-fit:contain;
+}
+
+/* Photo Animation */
+.hover-image {
+    transition: transform 0.3s , opacity 0.3s ; /* animation de transition */
+}
+.hover-image:hover {
+    transform: scale(1.05);     /* agrandit l'image de x1,05 */
+    opacity: 0.8;               /* flou & assombrissement */
+}
+
+textarea {
+    width: 300px;   /* largeur */
+    height: 150px;  /* hauteur */
+    resize: none;   /* fige dimension */
+}
+
+/* Photo Load Animation */ 
+/*Conflit avec l'animation hover*/
+.load-pic {
+    opacity: 0;                         /* pour effet d'apparition */
+    transform: translateY(20px);        /* déplace la photo 20px plus bas */
+    animation: slideIn 1s forwards;     /* durée animation */
+}
+
+@keyframes slideIn {                
+    to {
+        opacity: 1;                 /* 100% apparu */
+        transform: translateY(0);   /* ramène la photo à sa vrai position */
+    }
+}
+
+
+
+
+
